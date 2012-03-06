@@ -1,0 +1,35 @@
+/* HTML5
+                                                                              */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, 
+section {
+	// Corrects block display not defined for these elements in IE6/7/8/9 & FF3
+	display: block; 
+}
+
+audio, canvas, video { 
+	// Corrects inline-block display not defined in Firefox < 3.5
+	display: inline-block; 
+
+	// Corrects inline-block display not defined in IE6/7
+	*display: inline; 
+	*zoom: 1; 
+}
+
+audio:not([controls]) { 
+	// Modern browsers with support for audio will not display audio elements 
+	// that do not have controls. Because the previous rule displays audio 
+	// elements, this rule is needed to ensure that Firefox 3/4/5, Safari 4, and
+	// Opera will hide audio elements that do not have controls. Chrome, 
+	// Safari 5, and IE9 will never display audio elements that lack the 
+	// controls attribute.
+	display: none; 
+
+	// iOS5 leaves excess height on audio elements without controls. This 
+	// declaration removes it.
+	height: 0;
+}
+
+[hidden] { 
+	// Addresses styling not present in FF3, S4/5, IE7/8/9. No effect on IE6.
+	display: none; 
+}

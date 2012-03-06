@@ -1,0 +1,47 @@
+/* MIXINS
+                                                                              */
+
+.box-sizing (@value) {
+    -webkit-box-sizing: @value;
+    -moz-box-sizing: @value;
+    box-sizing: @value;
+}
+
+.hyphens (@value: auto) {
+	-webkit-hyphens: @value;
+	-moz-hyphens: @value;
+	hyphens: @value;
+}
+
+.hyphenate-character (@value: "\2010") {
+	-webkit-hyphenate-character: @value;
+	hyphenate-character: @value;
+}
+
+.hyphenate-limit-after (@value: 1) {
+	-webkit-hyphenate-limit-after: @value;
+	hyphenate-limit-after: @value;
+}
+
+.hyphenate-limit-before (@value: 3) {
+	-webkit-hyphenate-limit-before: @value;
+	hyphenate-limit-before: @value;
+}
+
+.monospace () {
+	font-family: @font-monospace-stack;
+}
+
+.sans-serif () {
+	font-family: @font-sans-serif-stack;
+}
+
+.serif () {
+	font-family: @font-serif-stack;
+}
+
+.text-size-adjust (@value: 100%) {
+	-webkit-text-size-adjust: @value;
+	-ms-text-size-adjust: @value;
+	text-size-adjust: @value;
+}

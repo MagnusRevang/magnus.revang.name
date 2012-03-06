@@ -1,0 +1,25 @@
+/* GRID
+                                                                              */
+
+// Not in variables due to it being overwritten in responsive stylesheets
+// @device-width: 320px;
+// @gutter: 10px;
+// @total-columns: 5;
+@column-width: 18.75%;
+
+.row () {
+	.clearfix;
+}
+
+.column (@columns: 1) {
+	width: @column-width * @columns;
+	float: left;
+}
+
+.push (@columns: 1) {
+	margin-left: @column-width * @columns;
+}
+
+.pull (@columns: 1) {
+	margin-right: @column-width * @columns;
+}

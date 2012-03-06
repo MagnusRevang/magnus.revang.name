@@ -1,0 +1,40 @@
+/* BASE
+                                                                              */
+
+html {
+
+	// TODO: -webkit-overflow-scrolling : touch; 
+	// TODO: -webkit-tap-highlight-color : lighten(@basecol, 20%);
+
+	// Correct text resizing oddly in IE6/7 when body font-size is set using em 
+	// units: 
+	font-size: 100%;
+
+	// Prevent iOS text size adjust on device orientation change, without 
+	// disabling user zoom
+	.text-size-adjust(100%); 
+}
+
+html, button, input, select, textarea { 
+	// ensure font-family consistency
+	.sans-serif; 
+	color: @foreground; 
+}
+
+body { 
+	// Removes margin in all browsers and addresses margins handled incorrectly 
+	// in IE6/7. The modern browser default is for an 8px margin, but this is 
+	// not considered to be a practical starting point in an author's CSS.
+	// Added centering of body if width is set
+	margin: 0 auto;
+
+	padding: 0;
+
+	// Vertical grid
+	font-size: 1em;
+	line-height: 1.5;
+
+	// The initial stylesheet is made for a 320px width. 93.75% of 320 is 300
+	// creating 10px gutters on each side and 5 x 60px columns inside
+	width: 93.75%; 
+}

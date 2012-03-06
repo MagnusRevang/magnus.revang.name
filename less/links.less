@@ -1,0 +1,46 @@
+/* LINKS
+                                                                              */
+
+:link, :visited {
+	text-decoration: none;
+}
+
+:link {
+	color: @link-color;
+	border-bottom: 1px solid @link-color;
+}
+
+:visited {
+	color: @visited-color;
+	border-bottom: 1px solid @visited-color;
+}
+
+:link:hover {
+	color: @link-hover-color;
+	border-bottom-color: @link-hover-color;
+}
+
+:visited:hover {
+	color: @visited-hover-color;
+	border-bottom-color: @visited-hover-color;
+}
+
+:link:focus, :visited:focus {
+	// WebKit on OSX uses a focus halo of a fixed color (usually blue). Chrome 
+	// on Windows uses an orange outline. Neither of these outlines change with 
+	// link or background color and people frequently look to remove it with 
+	// :focus {outline:0;}. They are also different from the focus outline used 
+	// by other browsers on Windows or OSX. To improve consistency and avoid 
+	// either having: a fixed focus style that can clash quite badly or be 
+	// nearly invisible in certain designs; or removing an important 
+	// accessibility aide, the outline is normalized to thin and dotted with no 
+	// fixed color.
+	outline: thin dotted;
+}
+
+:link:hover, :visited:hover, :link:active, :visited:active {
+	// Improves readability in all browsers when a link gains keyboard focus and
+	// it is hovered over with the mouse. The outline is shown only if the link 
+	// gains keyboard focus.
+	outline: 0;
+}

@@ -1,0 +1,121 @@
+/* TYPOGRAPHY
+                                                                              */
+
+// Addresses font sizes and margins set differently in IE6/7
+// Addresses font sizes within 'section' and 'article' in FF4+, Chrome, S5
+// TODO: Vertical Grid Values
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0;
+}
+
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+}
+
+h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0;
+}
+
+h6 {
+    font-size: 0.75em;
+    margin: 2.33em 0;
+}
+
+abbr[title] {
+	// Addresses styling not present in IE7/8/9, S5, Chrome
+	border-bottom: 1px dotted;
+
+    cursor: help;
+}
+
+strong {
+	// Addresses style set to 'bolder' in FF3+, S4/5, Chrome
+	font-weight: @bold-weight;
+}
+
+blockquote {
+    margin: 1em 40px;
+}
+
+dfn {
+	// Addresses styling not present in S5, Chrome
+    font-style: italic;
+}
+
+mark {
+	// Addresses styling not present in IE6/7/8/9
+    background: #ff0;
+    color: #000;
+}
+
+p, pre {
+	// Addresses margins set differently in IE6/7
+    margin: 1em 0;
+}
+
+p {
+    // http://www.w3.org/TR/css3-text/#hyphenation
+    .hyphens(auto);
+    .hyphenate-character("\2010");
+    .hyphenate-limit-after(1);
+    .hyphenate-limit-before(3);
+}
+
+pre, code, kbd, samp {
+	// Corrects font family set oddly in IE6, S4/5, Chrome
+	// en.wikipedia.org/wiki/User:Davidgothberg/Test59
+    font-family: monospace, serif;
+    _font-family: 'courier new', monospace;
+    font-size: 1em;
+}
+
+pre {
+	// Improves readability of pre-formatted text in all browsers
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+q {
+	// Addresses CSS quotes not supported in IE6/7
+    quotes: none;
+}
+
+q:before, q:after {
+	// Addresses quote property not supported in S4
+    content: '';
+    content: none;
+}
+
+small {
+    font-size: 75%;
+}
+
+// Prevents sub and sup affecting line-height in all browsers
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
