@@ -5,28 +5,29 @@
 <!--[if gt IE 8]><!--><html class="no-js" lang="en" manifest="manifest.appcache"><!--<![endif]-->
 <head>
 	<meta charset="utf-8">
-	<link rel="dns-prefetch" href="//libs.revang.name" />
-	<link rel="dns-prefetch" href="//use.typekit.com" />
+	<link rel="dns-prefetch" href="//libs.revang.name">
+	<link rel="dns-prefetch" href="//use.typekit.com">
 	<!-- TODO: DNS prefetch of ajax.googleapis.com? -->
 	<!-- TODO: DNS prefetch of www.google-analytics.com? -->
+	<!-- TODO: Does IE7-9 have dns-prefetch? -->
 
 	<title>Magnus Revang | Blog | Knowledge that will make your life easier!</title>
 	<!-- TODO: Add good description -->
 	<meta name="description" content="">
+	<meta name="author" content="Magnus Revang;blog@revang.name">
 
 	<meta name="viewport" content="width=device-width">
+
+	<!-- RSS.
+		 TODO: Load this from feedburner -->
+	<link rel="alternate" type="application/rss+xml" title="Latest Posts on RSS" href="/rss.xml">
 
 	<!-- Stylesheet for site.
 		 TODO: Use another form of cachebusting -->
 	<link rel="stylesheet" href="/css/style.css?v=0">
 
-	<!-- Modernizr. Loading from own static domain.
-	     TODO: Make custom modernizr for project -->
-	<script src="//libs.revang.name/modernizr/2.5.3/modernizr.min.js"></script>
-
-	<!-- RSS.
-		 TODO: Load this from feedburner -->
-	<link rel="alternate" type="application/rss+xml" title="Latest Posts on RSS" href="/rss.xml">
+	<!-- IE Specific -->
+	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
 	<!-- Typekit. Trimmed the tags a little.
 	     Included is Museo Slab and Museo Sans, all weights
