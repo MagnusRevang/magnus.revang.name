@@ -2,7 +2,8 @@
 
 /* AUTHOR */
 Magnus Revang
-Site: magnus.revang.name
+Site:    magnus.revang.name
+E-Mail:  blog@revang.name
 Twitter: @MagnusRevang
 
 /* THANKS */
@@ -11,7 +12,8 @@ The 320-and-up Framework Team
 Normalizer.css
 
 /* SITE */
-Standards: HTML5, CSS3
+Hosting:    
+Standards:  HTML5, CSS3
 Components: jQuery, Modernizr
-Services: Typekit, Google Analytics
-Software: Sublime Text 2, GitBox, CodeKit
+Services:   Typekit, Google Analytics
+Software:   Sublime Text 2, GitBox, CodeKit
