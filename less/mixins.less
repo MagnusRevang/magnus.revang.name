@@ -1,6 +1,10 @@
 /* MIXINS
                                                                               */
 
+.bold () {
+	font-weight: @bold-weight;
+}
+
 .box-sizing (@value) {
     -webkit-box-sizing: @value;
     -moz-box-sizing: @value;
@@ -19,6 +23,29 @@
 	&:after {
 		clear: both;
 	}
+}
+
+// gradients
+.gradient (@start: @foreground, @end: @background, @replacement: @gray) {
+	background: @replacement;
+	// TODO
+}
+
+.gradient-vertical (@start: @foreground, @end: @background, @replacement: @gray) {
+	background: @replacement;
+	// TODO
+}
+
+.gradient-directional (@direction, @start: @foreground, @end: @background, @replacement: @gray) {
+	background: @replacement;
+	// TODO
+}
+
+// opacity
+// TODO: check need for -khtml, -moz, -webkit opacity
+.opacity (@opacity: 100) {
+	filter: e(%("alpha(opacity=%d)", @opacity));
+	opacity: @opacity / 100;	
 }
 
 // Hide from both screenreaders and browsers: h5bp.com/u
@@ -77,6 +104,17 @@
 	font-family: @font-serif-stack;
 }
 
+// Size Shortcuts
+.size (@height, @width) {
+	height: @height;
+	width: @width;
+}
+
+.square (@size) {
+	.size (@size, @size);
+}
+
+// Text Size
 .text-size-adjust (@value: 100%) {
 	-webkit-text-size-adjust: @value;
 	-ms-text-size-adjust: @value;

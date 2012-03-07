@@ -12,7 +12,10 @@ html {
 
 	// Prevent iOS text size adjust on device orientation change, without 
 	// disabling user zoom
-	.text-size-adjust(100%); 
+	.text-size-adjust(100%);
+
+	// TODO: Test this:
+	// -webkit-font-smoothing: antialiased;
 }
 
 html, button, input, select, textarea { 
@@ -31,10 +34,10 @@ body {
 	padding: 0;
 
 	// Vertical grid
-	font-size: 1em;
-	line-height: 1.5;
+	font-size: 16px;
+	line-height: 24px;
 
-	// The initial stylesheet is made for a 320px width. 93.75% of 320 is 300
-	// creating 10px gutters on each side and 5 x 60px columns inside
-	width: 93.75%; 
+	// The initial stylesheet is made for a 320px width.
+	// Will have 10px gutters on each side and 5 x 60px columns inside
+	width: 300px; 
 }
