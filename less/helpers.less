@@ -1,26 +1,19 @@
 /* HELPERS
                                                                               */
 
+// Image Replacement
 .ir {
-
+	.image-replacement; // see mixins
 }
 
-// Hide from both screenreaders and browsers: h5bp.com/u
+// Hide from both screenreaders and browsers
 .hidden { 
-	display: none !important; 
-	visibility: hidden; 
+	.hidden; // see mixins
 }
 
-// Hide only visually, but have it available for screenreaders: h5bp.com/v 
+// Hide only visually, but have it available for screenreaders
 .visuallyhidden { 
-	border: 0; 
-	clip: rect(0 0 0 0); 
-	height: 1px; 
-	margin: -1px; 
-	overflow: hidden; 
-	padding: 0; 
-	position: absolute; 
-	width: 1px; 
+	.visuallyhidden; // see mixins
 }
 
 // Extends the .visuallyhidden class to allow the element to be focusable when 
@@ -36,19 +29,10 @@
 
 // Hide visually and from screenreaders, but maintain layout
 .invisible { 
-	visibility: hidden; 
+	.invisible; // see mixins 
 }
 
 // Contain floats: h5bp.com/q 
-.clearfix:before, .clearfix:after { 
-	content: ""; 
-	display: table; 
-}
-
-.clearfix:after { 
-	clear: both; 
-}
-
 .clearfix { 
-	*zoom: 1; 
+	.clearfix; // see mixins
 }

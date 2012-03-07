@@ -7,6 +7,27 @@
     box-sizing: @value;
 }
 
+// Contain floats: h5bp.com/q 
+.clearfix () { 
+	*zoom: 1;
+
+	&:before, &:after {
+		content: ""; 
+		display: table; 
+	}
+
+	&:after {
+		clear: both;
+	}
+}
+
+// Hide from both screenreaders and browsers: h5bp.com/u
+.hidden () {
+	display: none !important; 
+	visibility: hidden; 
+}
+
+// Hyphenation
 .hyphens (@value: auto) {
 	-webkit-hyphens: @value;
 	-moz-hyphens: @value;
@@ -28,6 +49,22 @@
 	hyphenate-limit-before: @value;
 }
 
+// Image Replacement
+// https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757c9e03dda4e463fb0d4db5a5f82d7
+.image-replacement () {
+	border: 0; 
+	font: 0/0 a; 
+	text-shadow: none; 
+	color: transparent; 
+	background-color: transparent;
+}
+
+// Hide visually and from screenreaders, but maintain layout
+.invisible () { 
+	visibility: hidden; 
+}
+
+// Fonts
 .monospace () {
 	font-family: @font-monospace-stack;
 }
@@ -45,3 +82,16 @@
 	-ms-text-size-adjust: @value;
 	text-size-adjust: @value;
 }
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v 
+.visuallyhidden () { 
+	border: 0; 
+	clip: rect(0 0 0 0); 
+	height: 1px; 
+	margin: -1px; 
+	overflow: hidden; 
+	padding: 0; 
+	position: absolute; 
+	width: 1px; 
+}
+

@@ -1,9 +1,7 @@
-/*
- * Remove text-shadow in selection highlight: h5bp.com/i
- * These selection declarations have to be separate
- * Also: hot pink! (or customize the background color to match your design)
- */
+/* SELECTION
+                                                                              */
 
+// These selection declarations have to be separate
 ::-moz-selection { 
 	.selection;
 }
@@ -17,7 +15,10 @@
 }
 
 .selection () {
-	background: @selection-color; 
-	color: @black; 
+	background: @selection-background; 
+	color: @selection-foreground; 
+	// Remove text-shadow in selection highlight: h5bp.com/i
 	text-shadow: none; 
 }
+
+// TODO: what about ::-webkit-selection img ???
