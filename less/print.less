@@ -1,57 +1,54 @@
 /* PRINT
                                                                               */
 
-// Print styles inlined to avoid required HTTP connection: h5bp.com/r
-@media print {
-  * { 
+* { 
     background: transparent !important; 
     color: black !important; 
     box-shadow:none !important; 
     text-shadow: none !important; 
     filter:none !important; 
     -ms-filter: none !important; 
-  } 
+} 
 
-  @page { 
+@page { 
     margin: 0.5cm; 
-  }
+}
 
-  a[href]:after { 
+a[href]:after { 
     content: " (" attr(href) ")"; 
-  }
-  
-  abbr[title]:after { 
-    content: " (" attr(title) ")"; 
-  }
-  
-  // Don't show links for images, or javascript/internal links
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { 
-    content: ""; 
-  } 
+}
 
-  pre, blockquote { 
+abbr[title]:after { 
+    content: " (" attr(title) ")"; 
+}
+
+// Don't show links for images, or javascript/internal links
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { 
+    content: ""; 
+} 
+
+pre, blockquote { 
     border: 1px solid #999; 
     page-break-inside: avoid; 
-  }
+}
 
-  thead { 
+thead { 
     display: table-header-group; 
-  } 
+} 
 
-  tr, img { 
+tr, img { 
     page-break-inside: avoid; 
-  }
+}
 
-  img { 
+img { 
     max-width: 100% !important; 
-  }
+}
 
-  p, h2, h3 { 
+p, h2, h3 { 
     orphans: 3; 
     widows: 3; 
-  }
-  
-  h2, h3 { 
+}
+
+h2, h3 { 
     page-break-after: avoid; 
-  }
 }

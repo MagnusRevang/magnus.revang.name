@@ -13,4 +13,40 @@
 @import "helpers";
 @import "diagnostics";
 @import "mixins";
-@import "print";
+
+/* === 480 ============================= */
+@media only screen and (min-width: 480px) {
+	@import "480";
+}
+
+/* === 600 ============================= */
+@media only screen and (min-width: 600px) {
+	@import "600";
+}
+
+/* === 720 ============================= */
+@media only screen and (min-width: 720px) {
+	@import "720";
+}
+
+/* === 800 ============================= */
+@media only screen and (min-width: 800px) {
+	@import "800";
+}
+
+/* === 960 ============================= */
+@media only screen and (min-width: 960px) {
+	@import "960";
+}
+
+/* === 2x ============================== */
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), 
+       only screen and (-o-min-device-pixel-ratio: 3/2), 
+       only screen and (min-device-pixel-ratio: 1.5) {
+    @import "2x";
+}
+
+// Print styles inlined to avoid required HTTP connection: h5bp.com/r
+@media print {
+	@import "print";
+}
