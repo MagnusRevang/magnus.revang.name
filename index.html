@@ -7,33 +7,23 @@
 	<meta charset="utf-8">
 	<link rel="dns-prefetch" href="//libs.revang.name">
 	<link rel="dns-prefetch" href="//use.typekit.com">
-	<!-- TODO: DNS prefetch of ajax.googleapis.com? -->
-	<!-- TODO: DNS prefetch of www.google-analytics.com? -->
-	<!-- TODO: Does IE7-9 have dns-prefetch? -->
+	<link rel="dns-prefetch" href="//ajax.googleapis.com">
+	<link rel="dns-prefetch" href="//www.google-analytics.com">
 
-	<title>Magnus Revang | Blog | Knowledge that will make your life easier!</title>
+	<title>Magnus Revang's Blog | Knowledge that will make your life easier!</title>
 	<!-- TODO: Add good description -->
 	<meta name="description" content="">
-	<meta name="author" content="Magnus Revang;blog@revang.name">
+	<meta name="author" content="Magnus Revang; blog@revang.name">
 
 	<meta name="viewport" content="width=device-width">
 
-	<!-- RSS.
-		 TODO: Load this from feedburner -->
+	<!-- TODO: Load this from feedburner -->
 	<link rel="alternate" type="application/rss+xml" title="Latest Posts on RSS" href="/rss.xml">
 
-	<!-- Stylesheet for site.
-		 TODO: Use another form of cachebusting -->
+	<!-- TODO: Use another form of cachebusting -->
 	<link rel="stylesheet" href="/css/style.css?v=0">
 
-	<!-- IE Specific -->
 	<!--[if IE]><script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-
-	<!-- Typekit. Trimmed the tags a little.
-	     Included is Museo Slab and Museo Sans, all weights
-	     TODO: Optimize payload size -->
-	<script src="//use.typekit.com/nju8gnr.js"></script>
-	<script>try{Typekit.load();}catch(e){}</script>
 
 	<link rel="canonical" href="/">
 </head>
@@ -42,46 +32,29 @@
 		<h1 id="logo">Magnus Revang</h1>
 		<h2 id="payoff">Knowledge that will make your life easier!</h2>
 	</header>
-	<!-- TODO: Add microformats from schema.org -->
 	<section role="main">
-		<article>
-			<header>
-				<h1>Conquer the Inbox — become an E-Mail Ninja</h1>
-				<h2 class="category">Productivity</h2>
-				<time datetime="2012-03-07">
-					<span class="month"><abbr title="March">Mar</abbr></span>
-					<span class="day">7</span>
-				</time>
-			</header>
-			<p>
-				Ipso Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</p>
-			<a href="/conquer-the-inbox/">Read Conquer the Inbox</a>
-		</article>
+		<!-- TODO: Load this with handlebars -->
+		<!-- TODO: Add a loader here maybe? -->
 	</section>
 	<footer role="contentinfo">
 		&copy; 2012 All rights reserved.
 	</footer>
-
-	<!-- Scripts. End of page for speed.
-	     TODO: Can I use a script loader for gain? -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  	<script>window.jQuery || document.write('<script src="//libs.revang.name/jquery/1.7.1/jquery.min.js"><\/script>')</script>
-
-  	<script src="/js/site.js?v=0"></script>
-
-  	<!-- Google Analytics. Trimmed away SSL code.
-  	     TODO: add page speed and maybe other stuff -->
-  	<script>
-    	var _gaq=[['_setAccount','UA-11949677-1'],['_trackPageview']];
-    	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    	g.src='//www.google-analytics.com/ga.js';
-    	s.parentNode.insertBefore(g,s)}(document,'script'));
+	<script>
+		// Google analytics settings
+		var _gaq=[['_setAccount','UA-11949677-1'],['_trackPageview']];
+		// LAB.js for script loading
+		(function(g,b,d){var c=b.head||b.getElementsByTagName("head"),D="readyState",E="onreadystatechange",F="DOMContentLoaded",G="addEventListener",H=setTimeout;
+		function f(){
+			$LAB.script("//use.typekit.com/nju8gnr.js").wait(function () {
+				try{Typekit.load();}catch(e){}
+			});
+			// TODO: What happens with googleapis is down?
+   			$LAB.script("//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js").wait().script("/js/site.js?v=0");
+   			$LAB.script("//www.google-analytics.com/ga.js")
+		}
+		H(function(){if("item"in c){if(!c[0]){H(arguments.callee,25);return}c=c[0]}var a=b.createElement("script"),e=false;a.onload=a[E]=function(){if((a[D]&&a[D]!=="complete"&&a[D]!=="loaded")||e){return false}a.onload=a[E]=null;e=true;f()};
+		a.src="//libs.revang.name/LAB/2.0.3/LAB.min.js";
+		c.insertBefore(a,c.firstChild)},0);if(b[D]==null&&b[G]){b[D]="loading";b[G](F,d=function(){b.removeEventListener(F,d,false);b[D]="complete"},false)}})(this,document);
 	</script>
 </body>
 </html>
