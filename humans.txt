@@ -7,8 +7,11 @@ Twitter: @MagnusRevang
 
 /* THANKS */
 The HTML5 Boilerplate Team (h5bp.com)
+The 320-and-up Framework Team
+Normalizer.css
 
 /* SITE */
 Standards: HTML5, CSS3
-Components: jQuery
+Components: jQuery, Modernizr
+Services: Typekit, Google Analytics
 Software: Sublime Text 2, GitBox, CodeKit
