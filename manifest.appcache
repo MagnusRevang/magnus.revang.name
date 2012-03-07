@@ -1,0 +1,13 @@
+CACHE MANIFEST
+# 2012-03-07:v1.0
+
+# Explicitly cached items
+CACHE:
+
+
+# Resources that require a connection
+NETWORK:
+
+
+# Offline fallbacks
+FALLBACK:
