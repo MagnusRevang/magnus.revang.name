@@ -13,7 +13,6 @@ function mAjax(url, callbackFunction)
 	r = w.XMLHttpRequest;
 
 	if (r) {
-		r.onreadystatechange = t.bindFunction(t.stateChange, t);
 		r.onreadystatechange = function () {
 			t.stateChange.apply(t, [t]);
 		};
