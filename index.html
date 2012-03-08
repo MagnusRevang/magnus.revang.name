@@ -7,7 +7,6 @@
 	<meta charset="utf-8">
 	<link rel="dns-prefetch" href="//libs.revang.name">
 	<link rel="dns-prefetch" href="//use.typekit.com">
-	<link rel="dns-prefetch" href="//ajax.googleapis.com">
 	<link rel="dns-prefetch" href="//www.google-analytics.com">
 
 	<title>Magnus Revang's Blog | Knowledge that will make your life easier!</title>
@@ -45,12 +44,11 @@
 		// LAB.js for script loading
 		(function(g,b,d){var c=b.head||b.getElementsByTagName("head"),D="readyState",E="onreadystatechange",F="DOMContentLoaded",G="addEventListener",H=setTimeout;
 		function f(){
-			$LAB.script("//use.typekit.com/nju8gnr.js").wait(function () {
-				try{Typekit.load();}catch(e){}
-			});
-			// TODO: What happens with googleapis is down?
-   			$LAB.script("//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js").wait().script("/js/site.js?v=0");
-   			$LAB.script("//www.google-analytics.com/ga.js")
+			$LAB.script("/js/site.js?v=0")
+   			    .script("//www.google-analytics.com/ga.js")
+   			    .script("//use.typekit.com/nju8gnr.js").wait(function () {
+						try{Typekit.load();}catch(e){}
+					});
 		}
 		H(function(){if("item"in c){if(!c[0]){H(arguments.callee,25);return}c=c[0]}var a=b.createElement("script"),e=false;a.onload=a[E]=function(){if((a[D]&&a[D]!=="complete"&&a[D]!=="loaded")||e){return false}a.onload=a[E]=null;e=true;f()};
 		a.src="//libs.revang.name/LAB/2.0.3/LAB.min.js";
