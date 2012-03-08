@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+        <title>Magnus Revang's Blog</title>
+        <description>Knowledge that will make your life easier!</description>
+        <link>http://magnus.revang.name/</link>
+        <lastBuildDate>Mon, 06 Sep 2010 00:01:00 +0000 </lastBuildDate>
+        <pubDate>Mon, 06 Sep 2009 16:45:00 +0000 </pubDate>
+        <ttl>1800</ttl>
+
+        <item>
+                <title>{{title}}</title>
+                <description>{{lead}}</description>
+                <link>http://magnus.revang.name/{{stub}}</link>
+                <guid></guid>
+                <pubDate>{{published}}</pubDate>
+        </item>
+ 
+</channel>
+</rss>
