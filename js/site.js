@@ -1,3 +1,27 @@
+// Smallest AJAX Lib adopted from http://www.blackmac.de/archives/31-Smallest-JavaScript-AJAX-library-ever!.html
+function mAjax(url, callbackFunction)
+{
+	var t = this, w = window, r = t.request;
+	t.stateChange = function (object) {
+		if (r.readyState === 4) {
+			callbackFunction(r.responseText);
+		}
+	};
+
+	t.callbackFunction = callbackFunction;
+	t.url = url;
+	r = w.XMLHttpRequest;
+
+	if (r) {
+		r.onreadystatechange = t.bindFunction(t.stateChange, t);
+		r.onreadystatechange = function () {
+			t.stateChange.apply(t, [t]);
+		};
+		r.open("GET", url, true);
+		r.send();
+	}
+}
+
 // Cross browser DOMContentReady adopted from http://javascript.nwbox.com/ContentLoaded/
 (function (win, fn) {
 	var done = false,
@@ -56,7 +80,7 @@
 		removeClass(e, p);
 		addClass(e, n);
 	}
-	
+
 	// change .no-js class on HTML tag to .js to enable js specific styles
 	// $(".no-js").removeClass("no-js").addClass("js");
 	(function (d) {
