@@ -30,7 +30,8 @@
 		// LAB.js for script loading
 		(function(g,b,d){var c=b.head||b.getElementsByTagName("head"),D="readyState",E="onreadystatechange",F="DOMContentLoaded",G="addEventListener",H=setTimeout;
 		function f(){
-			$LAB.script("/js/site.js?v=0")
+			$LAB.scriot("//libs.revang.name/handlebars/1.0.beta.6/handlebars.runtime.min.js")
+				.script("/js/site.js?v=0")
    			    .script("//www.google-analytics.com/ga.js")
    			    .script("//use.typekit.com/nju8gnr.js").wait(function () {
 						try{Typekit.load();}catch(e){}
@@ -47,8 +48,7 @@
 		<h2 id="payoff">Knowledge that will make your life easier!</h2>
 	</header>
 	<section role="main">
-		<!-- TODO: Load this with handlebars -->
-		<!-- TODO: Add a loader here maybe? -->
+		
 	</section>
 	<footer role="contentinfo">
 		&copy; 2012 All rights reserved.
