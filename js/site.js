@@ -1,4 +1,5 @@
 // Smallest AJAX Lib adopted from http://www.blackmac.de/archives/31-Smallest-JavaScript-AJAX-library-ever!.html
+// Only works in IE7+ and with GET requests
 function mAjax(url, callbackFunction)
 {
 	var t = this, w = window, r = t.request;
@@ -21,6 +22,37 @@ function mAjax(url, callbackFunction)
 	}
 }
 
+// Caching based on http://dustindiaz.com/javascript-cache-provider
+function Cache () {
+	this.cache = {};
+}
+
+try {
+	Cache.hasLocalStorage = ('localStorage' in window) && window.localStorage !== null;
+} catch (e) {
+	Cache.hadLocalStorage = 0;
+}
+
+
+
+// URL Manipulation
+function pushState (path) {
+
+}
+
+function popState (path) {
+
+}
+
+// Router
+function loadPath (path) {
+	// TODO: GET TEMPLATE (Caching? Localstorage?)
+	// TODO: GET DATA
+	// TODO: PUT DATA INTO TEMPLATE
+	// TODO: PUT RENDER INTO APPRORIATE PLACE
+	// TODO: PUSHSTATE
+}
+
 // Cross browser DOMContentReady adopted from http://javascript.nwbox.com/ContentLoaded/
 (function (win, fn) {
 	var done = false,
@@ -30,16 +62,16 @@ function mAjax(url, callbackFunction)
 		rem = doc.addEventListener ? 'removeEventListener' : 'detachEvent',
 		pre = doc.addEventListener ? '' : 'on',
 		init = function(e) {
-			if (e.type === 'readystatechange' && doc.readyState !== 'complete') {
-				return;
-			}
-			(e.type === 'load' ? win : doc)[rem](pre + e.type, init, false);
+				if (e.type === 'readystatechange' && doc.readyState !== 'complete') {
+					return;
+				}
+				(e.type === 'load' ? win : doc)[rem](pre + e.type, init, false);
 				if (!done && (done = true)) {
 					fn.call(win, e.type || e);
 				}
 			},
 		poll = function() {
-			try { root.doScroll('left'); } catch(e) { setTimeout(poll, 50); return; }
+				try { root.doScroll('left'); } catch(e) { setTimeout(poll, 50); return; }
 				init('poll');
 			};
 
@@ -57,6 +89,8 @@ function mAjax(url, callbackFunction)
 		win[add](pre + 'load', init, false);
 	}
 })(window, function () { // DOMContentLoaded here
+
+	// cache
 
 	// utility classes
 	function hasClass (e,c) {
@@ -94,4 +128,8 @@ function mAjax(url, callbackFunction)
 			t.location = s.location;
 		}
 	})(window);
+
+	// TODO: Detect URL and route accordingly
+	// TODO: Register event handlers for routing
+	// TODO: Take over inline links for routing
 });
