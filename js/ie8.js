@@ -1,3 +1,8 @@
+// HTML5 Shiv
+"AbbrArticleAsideAudioCanvasDetailsFigureFooterHeaderHgroupMarkMenuMeterNavOutputProgressSectionTimeVideo".replace(/.[a-z]+/g,function(n){document.createElement(n)});
+
+
+
 // Production steps of ECMA-262, Edition 5, 15.4.4.18
 // Reference: http://es5.github.com/#x15.4.4.18
 if ( !Array.prototype.forEach ) {
