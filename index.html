@@ -1,13 +1,18 @@
 <!doctype html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"><![endif]-->
-<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
-<!--[if IE 8]><html class="no-js lt-ie9" lang="en"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8" lang="en"><![endif]-->
 <!--[if gt IE 8]><!--><html class="no-js" lang="en" manifest="manifest.appcache"><!--<![endif]-->
+<!--
+     magnus.revang.name
+     this code can be hard to read, check out GITHUB for annotated source
+     https://github.com/MagnusRevang/magnus.revang.name
+                                                                             -->
 <head>
 	<meta charset="utf-8">
 	<link rel="dns-prefetch" href="//libs.revang.name">
-	<link rel="dns-prefetch" href="//use.typekit.com">
-	<link rel="dns-prefetch" href="//www.google-analytics.com">
+	<link rel="dns-prefetch" href="//api.revang.name">
+
+	<!--[if lt IE 8]><meta http-equiv="refresh" content="0;url=/unsupported/"><![endif]-->
+	<noscript><meta http-equiv="refresh" content="0;url=/noscript/"></noscript>
 
 	<title>Magnus Revang's Blog | Knowledge that will make your life easier!</title>
 	<!-- TODO: Add good description -->
@@ -22,22 +27,23 @@
 
 	<!-- TODO: Use a form of cachebusting -->
 	<link rel="stylesheet" href="/css/style.css">
+	<!--[if (lt IE 9) & (!IEMobile)]><link rel="stylesheet" href="/css/960.css"><![endif]-->
 
 	<!-- TODO: Add Social Graph and Schema.org data -->
 
 	<!--[if lt IE 9]><script src="/js/ie8.js"></script><![endif]-->
 	<script>
 		var _gaq=[['_setAccount','UA-11949677-1'],['_trackPageview']];
-		(function(d,t){var d=document, t="script";arguments.forEach(function(a){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=a;s.parentNode.insertBefore(g,s);});})("/js/lib.js", "/js/site.js", "", "//www.google-analytics.com/ga.js")
+		(function(){var d=document,t="script";arguments.forEach(function(a){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src=a;s.parentNode.insertBefore(g,s);});})("/js/lib.js", "/js/site.js", "//www.google-analytics.com/ga.js")
 	</script>
 </head>
-<body id="home">
+<body>
 	<header role="banner">
 		<h1 id="logo">Magnus Revang</h1>
 		<h2 id="payoff">Knowledge that will make your life easier!</h2>
 	</header>
 	<section role="main">
-
+		
 	</section>
 	<footer role="contentinfo">
 		&copy; 2012 All rights reserved.
