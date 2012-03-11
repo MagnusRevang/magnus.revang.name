@@ -169,20 +169,27 @@ var LIB = (function () {
 
 	});
 
-	// TODO: Add localstorage functionality
+	// TODO: FIX localStorage/sessionStorage stuff
+	// TODO: Use getItem, addItem, removeItem
 	LIB.cache.prototype.extend({
 
-		store: [],
+		hasLocalStorage: false,
+
+		hasSessionStorage: false,
+
+		store: (this.hasLocalStorage) ? localStorage :
+					((this.hasSessionStorage) ? sessionStorage :
+						[]),
 
 		get: function (key, callbackFunction) {
 			if (!callbackFunction) {
-				return LIB.cache.store[key];
+				return JSON.parse(LIB.cache.store[key]);
 			}
-			callbackFunction(LIB.cache.store[key]);
+			callbackFunction(JSON.parse(LIB.cache.store[key]));
 		},
 
 		add: function (key, value) {
-			LIB.cache.store[key] = value;
+			LIB.cache.store[key] = JSON.stringify(value);
 		},
 
 		remove: function (key) {
@@ -190,7 +197,7 @@ var LIB = (function () {
 		},
 
 		has: function (key, value) {
-			return (LIB.cache.store[key]);
+			return (LIB.cache.store[key]) ? true : false;
 		}
 
 	});
@@ -208,6 +215,15 @@ var LIB = (function () {
 	});
 
 	LIB.history.prototype.extend({
+
+		hasState: (!!(window.history && history.pushState)),
+
+		push: function (state, title, path) {
+			if (this.hasState) {
+				return window.history.pushState(state, title, path);
+			}
+			
+		}
 
 	});
 
